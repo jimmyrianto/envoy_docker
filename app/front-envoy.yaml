@@ -71,14 +71,20 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: 11.0.12.135
+                address: 11.0.8.135
                 port_value: 8000
-      - lb_endpoints:
-        - endpoint:
-            address:
-              socket_address:
-                address: 11.0.14.162
-                port_value: 8000
+      # - lb_endpoints:
+      #   - endpoint:
+      #       address:
+      #         socket_address:
+      #           address: 11.0.12.135
+      #           port_value: 8000
+      # - lb_endpoints:
+      #   - endpoint:
+      #       address:
+      #         socket_address:
+      #           address: 11.0.14.162
+      #           port_value: 8000
   - name: api
     connect_timeout: 1s
     lb_policy: round_robin
@@ -89,8 +95,14 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: 11.0.12.135
+                address: 11.0.8.135
                 port_value: 9000
+      # - lb_endpoints:
+      #   - endpoint:
+      #       address:
+      #         socket_address:
+      #           address: 11.0.12.135
+      #           port_value: 9000
 admin:
   access_log_path: "/dev/stdout"
   address:
