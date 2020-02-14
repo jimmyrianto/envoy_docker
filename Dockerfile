@@ -26,4 +26,4 @@ COPY ./app /app
 WORKDIR /app
 
 RUN curl -L https://getenvoy.io/cli | bash -s -- -b /usr/local/bin
-RUN getenvoy run standard:1.11.1 -- --config-path ./front-envoy.yaml
+CMD getenvoy run standard:1.11.1 -- --config-path ./front-envoy.yaml
