@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  envoy:
+    build: .
+    
+    volumes:
+      - $PWD/app:/app
+    
+    ports:
+      - "8000:80"
+    
+    container_name: envoy
